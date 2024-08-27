@@ -2,18 +2,25 @@
 
 import { TypeAnimation } from "react-type-animation";
 
-const Typer = () => {
+type TypeProps = {
+    descriptions: string[],
+    repeat?: number,
+    infinito?: true | false,
+}
+
+const Typer: React.FC<TypeProps> = ({descriptions, repeat, infinito = true}) => {
     return ( 
         <TypeAnimation 
-                sequence={[
-                    "Hola, soy valentino y Soy un desarrollador de tecnologías web apasionado en aprender y crear proyectos complejos.",
-                    1000,
-                ]}
-                wrapper='span'
-                speed={50}
-                repeat={1}
-                className='font-bold text-secondary'
-                />
+        sequence={
+            descriptions.reduce((acc: any[], description: string) => {
+            return [...acc, description, 10000];  
+            }, [])
+        }
+        wrapper='span'
+        speed={50}
+        repeat={infinito? Infinity : repeat}
+        className='font-bold'
+        />
      );
 }
  
