@@ -21,7 +21,7 @@ const NavBar = () => {
                 exit="hidden"
             >
                 <CoverParticles />
-                <nav>
+                <nav className="max-w-screen-2xl mx-auto">
                     <iframe src="https://giphy.com/embed/g5nbfmiZQAjihMx4Oi" className="absolute -translate-y-6 z-30 pointer-events-none" allowFullScreen></iframe>
                     <div className="absolute z-30 ml-52 mt-12 text-3xl">
                         <Typer descriptions={[ "","otion"]} speed={50} intervalo={1200}/>
@@ -30,7 +30,7 @@ const NavBar = () => {
                         {itemsNavbar.slice(0,3).map((item) => (
                             <div
                             key={item.id}
-                            className={`px-3 py-2 transition duration-100
+                            className={`px-3 py-2 transition duration-400
                                 rounded-full cursor-pointer hover:bg-[#92D500] hover:text-black hover:font-bold
                                 ${path === item.link && 'bg-slate-100 text-black font-bold'}
                                 `}

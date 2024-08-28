@@ -11,7 +11,21 @@ const Description = () => {
     const descripciones: string[] = ["Estudiante","Apasionado","Trabajador"]
     let nombre: string[] = []
     nombre = ('ValentinoArmindo').split("");
-    const texto: string [] = ["Estudiante de desarrollo de aplicaciones web con sólida comprensión de programación y diseño web. Experimentado en tecnologías front-end como HTML, CSS, JavaScript, y frameworks como React, Vue, Django, Sprinboot. Capacidad demostrada para trabajar en equipos colaborativos, adaptarse a cambios rápidos y apasionado por aprender nuevas tecnologías. Busco oportunidades para contribuir al desarrollo de proyectos innovadores en aplicaciones web."]
+    const texto: string [] = [`
+        Estudiante de desarrollo de aplicaciones web con sólida comprensión de programación y diseño
+        web. ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎
+         ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎
+         ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  
+        Experimentado en tecnologías front-end como HTML, CSS, JavaScript, y frameworks como
+        React, Vue, Django, Sprinboot.  Capacidad para trabajar en equipos colaborativos,
+        adaptarse a cambios rápidos y apasionado por aprender nuevas tecnologías. Busco oportunidades
+        para contribuir al desarrollo de proyectos innovadores en aplicaciones web.‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎
+         ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎
+         ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎
+         Tengo experienza programando en Typescript y he utilizado con más frecuencia frameworks como Vue, React con Nextjs (Esta web ha sido creada con estas tecnologías) en el front.
+         En el backend he trabajado generando APIS con Django y Python, también Sprinboot con Java.
+
+        `]
     return ( 
         <div className="flex size-full justify-between">
             <motion.div
@@ -38,9 +52,9 @@ const Description = () => {
                 </div>
             </motion.div>
             <div className=" w-[48%] flex justify-center  relative pointer-events-none backdrop-blur-sm z-10">
-                <iframe className="absolute" src="https://giphy.com/embed/GRLqeKQjvmx9MtCIrH" width="480" height="480" allowFullScreen></iframe>
-                <p className="w-[45%] text-base mt-28"><Typer descriptions={texto} speed={60}/></p>
-                <iframe className="absolute pointer-events-none mt-80" src="https://giphy.com/embed/cRNeCftHi7SlX3Fwml" width="480" height="480" allowFullScreen></iframe>
+                <iframe className="absolute -translate-y-24" src="https://giphy.com/embed/GRLqeKQjvmx9MtCIrH" width="680" height="680" allowFullScreen></iframe>
+                <p className="w-[80%] text-base mt-20 text-justify"><Typer descriptions={texto} speed={100} intervalo={15000}/></p>
+                <iframe className="absolute pointer-events-none mt-60" src="https://giphy.com/embed/cRNeCftHi7SlX3Fwml" width="680" height="680" allowFullScreen></iframe>
             </div>
         </div>
      );
