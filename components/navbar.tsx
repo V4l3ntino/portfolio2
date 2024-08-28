@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { motion } from "framer-motion"
 import { fadeIn } from "@/utils/motion-transitions";
 import CoverParticles from "./cover-particles";
+import Typer from "./typingAnimation";
 
 
 const NavBar = () => {
@@ -21,7 +22,10 @@ const NavBar = () => {
             >
                 <CoverParticles />
                 <nav>
-                    <iframe src="https://giphy.com/embed/wJP3DKVDD4Wm5s2Vpm" className="absolute translate-y-12 pointer-events-none" allowFullScreen></iframe>
+                    <iframe src="https://giphy.com/embed/g5nbfmiZQAjihMx4Oi" className="absolute -translate-y-6 z-30 pointer-events-none" allowFullScreen></iframe>
+                    <div className="absolute z-30 ml-52 mt-12 text-3xl">
+                        <Typer descriptions={[ "","otion"]} speed={50} intervalo={1200}/>
+                    </div>
                     <div className="flex items-center justify-center gap-2 px-4 py-1 z-20 backdrop-blur-sm">
                         {itemsNavbar.slice(0,3).map((item) => (
                             <div
