@@ -11,6 +11,8 @@ const Description = () => {
     const descripciones: string[] = ["Estudiante","Apasionado","Trabajador"]
     let nombre: string[] = []
     nombre = ('ValentinoArmindo').split("");
+    let apellido: string[] = []
+    apellido = ('Hontar_Dos_Santos').split("");
     const texto: string [] = [`
         Estudiante de desarrollo de aplicaciones web con sólida comprensión de programación y diseño
         web. ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎
@@ -29,9 +31,9 @@ const Description = () => {
     return ( 
         <div className="flex size-full justify-between">
             <motion.div
-                    initial={{ scale: 0, opacity: 0, y: '-100vw' }}    // Comienza desde un tamaño pequeño y completamente transparente
-                    animate={{ scale: 1, opacity: 1, y: 0 }}    // Expande hasta el tamaño original y se vuelve completamente visible
-                    transition={{ type: "spring", stiffness: 50, duration: 2 }}  // Duración de 1.5 segundos con una transición suave
+                    initial={{ scale: 0, opacity: 0, y: '-100vw' }}    
+                    animate={{ scale: 1, opacity: 1, y: 0 }}    
+                    transition={{ type: "spring", stiffness: 50, duration: 2 }}  
                     
                     className="flex flex-col items-center justify-center w-[49%] bg-slate-100 rounded "
             >
@@ -44,6 +46,11 @@ const Description = () => {
                                     <TransitionApearence key={index} text={item} fontSize="40px" delay={index*0.2} color={`${item == "V" || item == "A" ? "#92D500" : "black"}`}/>
                                 ))}
                             </h1>
+                            <p className="flex">
+                            {apellido.map((item, index) => (
+                                    <TransitionApearence key={index} text={item} fontSize="18px" delay={index*0.2} color={`${item == "H" || item == "D" || item == "S" ? "#92D500" : "black"}`}/>
+                                ))}
+                            </p>
                         
                     </div>
                 <div className="z-10">
