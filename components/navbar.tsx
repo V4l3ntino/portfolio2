@@ -18,7 +18,7 @@ const NavBar = () => {
                 exit="hidden"
                 className="pb-4"
             >
-                <nav className="max-w-screen-2xl mx-auto  rounded backdrop-blur-sm p-4">
+                <nav className="max-w-screen-2xl mx-auto bg-slate-50/15 rounded backdrop-blur-sm p-4">
 
                     <ul className="flex items-center justify-center gap-2 px-4 py-1 z-20 ">
                         {itemsNavbar.slice(0,3).map((item) => (

@@ -20,14 +20,14 @@ const Description = () => {
             <h1 className="absolute -top-6 left-0 w-auto flex">
                 {
                     ("Web Developer").split(" ").map((word, key) => (
-                        <span className="mr-5 flex font-bold">
+                        <span className={`mr-5 flex font-bold`}>
                             {
                                 word.split("").map((char, index) => (
                                     <TransitionApearence 
                                     character={char}
                                     fontSize="50px"
                                     delay={key+index*0.09}
-                                    color="white"
+                                    color={`${char == "W" || char == "D" ? "#92D500" : "white"}`}
                                     />
                                 ))
                             }
@@ -43,7 +43,7 @@ const Description = () => {
                     <div className="-full flex justify-center items-end h-[49%]">
                         <Image src="/services.png" className="z-20" width={500} height={500} alt="Avatar"/>
                     </div>
-                    <div className="w-[100%] max-w-[500px] m-auto p-2  bg-gradient-to-b from-slate-100 z-20  to-transparent rounded-md h-auto min-h-[50%] text-black">
+                    <div className="w-[100%] shadow-lg max-w-[500px] m-auto p-2  bg-gradient-to-b from-slate-100 z-20  to-transparent rounded-md h-auto min-h-[50%] text-black">
                         <h2 className="font-bold text-xl">
                             {
                                 ("Nombre: Valentino Armindo Hontar Dos Santos").split(" ").map((word,key) => (
@@ -104,7 +104,7 @@ const Description = () => {
                         </p>
                         <p>
                         {
-                            (`Me dedico al desarrollo de páginas web, actualmente estoy aprendiendo React y Framer Motion. Mi objetivo es trabajar duro y crecer exponelcialmente en cualquier empesa. Soy una persona trabajadora y con mucha actitud.`).split(" ").map((word, key) => (
+                            (`Me dedico al desarrollo de páginas web y actualmente estoy enfocado en perfeccionar mis habilidades en React y Framer Motion. Estoy comprometido con un crecimiento profesional  y tengo la firme convicción de que con trabajo duro y determinación, puedo contribuir significativamente al éxito de cualquier empresa en la que colabore.`).split(" ").map((word, key) => (
                                 <span key={key} className={`inline-block mr-2 ${word == "React" || word == "Framer" || word == "Motion." || word == "trabajadora" || word == "actitud" || word == "persona" ? "font-bold" : ""}`}>
                                     {
                                         word.split("").map((character, index) => (
