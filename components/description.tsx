@@ -20,7 +20,7 @@ const Description = () => {
             <h1 className="absolute -top-6 left-0 w-auto flex">
                 {
                     ("Web Developer").split(" ").map((word, key) => (
-                        <span className="mr-2 flex font-bold">
+                        <span className="mr-5 flex font-bold">
                             {
                                 word.split("").map((char, index) => (
                                     <TransitionApearence 
@@ -43,11 +43,11 @@ const Description = () => {
                     <div className="-full flex justify-center items-end h-[49%]">
                         <Image src="/services.png" className="z-20" width={500} height={500} alt="Avatar"/>
                     </div>
-                    <div className="max-w-[80%] w-auto m-auto p-8  bg-gradient-to-b from-slate-100 z-20  to-transparent rounded-md h-auto min-h-[50%] text-black">
-                        <h2>
+                    <div className="w-[100%] m-auto p-2  bg-gradient-to-b from-slate-100 z-20  to-transparent rounded-md h-auto min-h-[50%] text-black">
+                        <h2 className="font-bold text-xl">
                             {
                                 ("Nombre: Valentino Armindo Hontar Dos Santos").split(" ").map((word,key) => (
-                                    <span key={key} className="inline-block mr-2">
+                                    <span key={key} className={`inline-block mr-2`}>
                                         {
                                             word.split("").map((char, index) => (
                                                 <motion.span
@@ -74,9 +74,38 @@ const Description = () => {
                             }
                         </h2>
                         <p>
+                            {
+                                ("Edad: 21 años").split(" ").map((word,key) => (
+                                    <span key={key} className="inline-block mr-2">
+                                        {
+                                            word.split("").map((char, index) => (
+                                                <motion.span
+                                                key={index*key}
+                                                className="inline-block"
+                                                initial={{
+                                                    opacity:0,
+                                                    y: -20,
+                                                }}
+                                                animate={{
+                                                    opacity: 1,
+                                                    y: 0,
+                                                }}
+                                                transition={{
+                                                    delay: 0.9 + (index/100) + (key/100)
+                                                }}
+                                                >
+                                                    {char}
+                                                </motion.span>
+                                            ))
+                                        }
+                                    </span>
+                                ))
+                            }
+                        </p>
+                        <p>
                         {
-                            (`Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste accusantium vel atque reprehenderit molestias dolor natus quam, assumenda modi deserunt corrupti necessitatibus ullam sed consectetur quos dicta maiores, hic ipsam?`).split(" ").map((word, key) => (
-                                <span key={key} className="inline-block mr-2">
+                            (`Me dedico al desarrollo de páginas web, actualmente estoy aprendiendo React y Framer Motion. Mi objetivo es trabajar duro y crecer exponelcialmente en cualquier empesa. Soy una persona trabajadora y con mucha actitud.`).split(" ").map((word, key) => (
+                                <span key={key} className={`inline-block mr-2 ${word == "React" || word == "Framer" || word == "Motion." || word == "trabajadora" || word == "actitud" || word == "persona" ? "font-bold" : ""}`}>
                                     {
                                         word.split("").map((character, index) => (
                                             <motion.span
