@@ -27,7 +27,7 @@ export default function RootLayout({
             <div className="flex w-40  justify-center">
               <iframe src="https://giphy.com/embed/g5nbfmiZQAjihMx4Oi" className="pointer-events-none" allowFullScreen></iframe>
               <div className="opacity-0">
-                  <Typer descriptions={[ "","otion"]} speed={50} intervalo={1200}/>
+                  <Typer descriptions={[ "","*****"]} speed={50} intervalo={1200}/>
               </div>
             </div>
           </div>
