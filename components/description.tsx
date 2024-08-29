@@ -17,6 +17,24 @@ const Description = () => {
 
     return ( 
         <div className="bg-gradient-to-b from-slate-50/15  to-transparent  flex-crow w-[100%] max-w-[1024px] rounded z-10 h-[600px] relative ">
+            <h1 className="absolute -top-6 left-0 w-auto flex">
+                {
+                    ("Web Developer").split(" ").map((word, key) => (
+                        <span className="mr-2 flex font-bold">
+                            {
+                                word.split("").map((char, index) => (
+                                    <TransitionApearence 
+                                    character={char}
+                                    fontSize="50px"
+                                    delay={key+index*0.09}
+                                    color="white"
+                                    />
+                                ))
+                            }
+                        </span>
+                    ))
+                }
+            </h1>
             <div className="-translate-y-40">
                 <motion.div
                 initial={{y:-20, opacity: 0}}
@@ -26,7 +44,7 @@ const Description = () => {
                         <Image src="/services.png" className="z-20" width={500} height={500} alt="Avatar"/>
                     </div>
                     <div className="max-w-[80%] w-auto m-auto p-8  bg-gradient-to-b from-slate-100 z-20  to-transparent rounded-md h-auto min-h-[50%] text-black">
-                        <h1>
+                        <h2>
                             {
                                 ("Nombre: Valentino Armindo Hontar Dos Santos").split(" ").map((word,key) => (
                                     <span key={key} className="inline-block mr-2">
@@ -54,7 +72,7 @@ const Description = () => {
                                     </span>
                                 ))
                             }
-                        </h1>
+                        </h2>
                         <p>
                         {
                             (`Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste accusantium vel atque reprehenderit molestias dolor natus quam, assumenda modi deserunt corrupti necessitatibus ullam sed consectetur quos dicta maiores, hic ipsam?`).split(" ").map((word, key) => (
@@ -73,7 +91,7 @@ const Description = () => {
                                                 y: 0,
                                             }}
                                             transition={{
-                                                delay: 0.9 + (index/100) * (key/100)
+                                                delay: (key/10)+(index/10)*0.01
                                             }}
                                             >
                                                 {character}

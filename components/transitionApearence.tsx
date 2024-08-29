@@ -19,7 +19,7 @@ const TransitionApearence: React.FC<Props> = ({character, fontSize, delay, color
                 fontSize: fontSize,
             }}
             >
-                <span>{character}</span>
+                <span className="inline-block">{character}</span>
             </motion.div>
         </div>
      );
