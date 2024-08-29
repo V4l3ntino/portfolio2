@@ -43,7 +43,7 @@ const Description = () => {
                     <div className="-full flex justify-center items-end h-[49%]">
                         <Image src="/services.png" className="z-20" width={500} height={500} alt="Avatar"/>
                     </div>
-                    <div className="w-[100%] m-auto p-2  bg-gradient-to-b from-slate-100 z-20  to-transparent rounded-md h-auto min-h-[50%] text-black">
+                    <div className="w-[100%] max-w-[500px] m-auto p-2  bg-gradient-to-b from-slate-100 z-20  to-transparent rounded-md h-auto min-h-[50%] text-black">
                         <h2 className="font-bold text-xl">
                             {
                                 ("Nombre: Valentino Armindo Hontar Dos Santos").split(" ").map((word,key) => (
