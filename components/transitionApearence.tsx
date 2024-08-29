@@ -16,10 +16,10 @@ const TransitionApearence: React.FC<Props> = ({character, fontSize, delay, color
             transition={{ duration: 1.5, ease: "easeInOut", delay: delay }} // Duración de 1.5 segundos y suavizado
             style={{
                 color: color,
-                fontSize: fontSize,
+                
             }}
             >
-                <span className="inline-block">{character}</span>
+                <span className="inline-block titulo">{character}</span>
             </motion.div>
         </div>
      );

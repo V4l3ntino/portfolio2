@@ -31,3 +31,7 @@ body {
     text-wrap: balance;
   }
 }
+.titulo{
+  font-size: clamp(35px, 8vw, 100px);
+  border-radius: 12px;
+}

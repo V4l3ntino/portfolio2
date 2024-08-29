@@ -22,15 +22,20 @@ const NavBar = () => {
 
                     <ul className="flex items-center justify-center gap-2 px-4 py-1 z-20 ">
                         {itemsNavbar.slice(0,3).map((item) => (
-                            <li
+                            <motion.ul
                             key={item.id}
-                            className={`px-3 py-2 transition duration-400
-                                rounded-full cursor-pointer hover:bg-[#92D500] hover:text-black hover:font-bold
-                                ${path === item.link && 'bg-slate-100 text-black font-bold'}
-                                `}
-                            >
-                                <Link href={item.link}>{item.title}</Link>
-                            </li>
+                            initial={{y:'-10vw'}}
+                            animate={{y: 0}}
+                            transition={{delay: item.id * 0.1}}                            >
+                                <li
+                                className={`px-3 py-2 transition duration-400
+                                    rounded-full cursor-pointer hover:bg-[#92D500] hover:text-black hover:font-bold
+                                    ${path === item.link && 'bg-slate-100 text-black font-bold'}
+                                    `}
+                                >
+                                    <Link href={item.link}>{item.title}</Link>
+                                </li>
+                            </motion.ul>
                         ))}
                     </ul>
                 </nav>

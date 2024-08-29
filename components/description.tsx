@@ -17,13 +17,14 @@ const Description = () => {
 
     return ( 
         <div className="bg-gradient-to-b from-slate-50/15  to-transparent  flex-crow w-[100%] max-w-[1024px] rounded z-10 h-[600px] relative ">
-            <h1 className="absolute -top-6 left-0 w-auto flex">
+            <h1 className="absolute w-auto flex -translate-y-40">
                 {
                     ("Web Developer").split(" ").map((word, key) => (
-                        <span className={`mr-5 flex font-bold`}>
+                        <span key={key} className={`mr-5 flex font-bold`}>
                             {
                                 word.split("").map((char, index) => (
-                                    <TransitionApearence 
+                                    <TransitionApearence
+                                    key={index} 
                                     character={char}
                                     fontSize="50px"
                                     delay={key+index*0.09}
