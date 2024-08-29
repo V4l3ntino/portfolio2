@@ -12,23 +12,17 @@ import Typer from "./typingAnimation";
 const NavBar = () => {
     const path = usePathname();
     return ( 
-        
-        <div className="mt-6 ">
-            <motion.div
-                variants={fadeIn("bottom")}
-                initial="hidden"
-                animate="visible"
+        <motion.div
+                initial={{y:'-10vw'}}
+                animate={{y: 0}}
                 exit="hidden"
+                className="pb-4"
             >
-                <CoverParticles />
-                <nav className="max-w-screen-2xl mx-auto">
-                    <iframe src="https://giphy.com/embed/g5nbfmiZQAjihMx4Oi" className="absolute -translate-y-6 z-30 pointer-events-none" allowFullScreen></iframe>
-                    <div className="absolute z-30 ml-52 mt-12 text-3xl">
-                        <Typer descriptions={[ "","otion"]} speed={50} intervalo={1200}/>
-                    </div>
-                    <div className="flex items-center justify-center gap-2 px-4 py-1 z-20 backdrop-blur-sm">
+                <nav className="max-w-screen-2xl mx-auto  rounded backdrop-blur-sm p-4">
+
+                    <ul className="flex items-center justify-center gap-2 px-4 py-1 z-20 ">
                         {itemsNavbar.slice(0,3).map((item) => (
-                            <div
+                            <li
                             key={item.id}
                             className={`px-3 py-2 transition duration-400
                                 rounded-full cursor-pointer hover:bg-[#92D500] hover:text-black hover:font-bold
@@ -36,12 +30,11 @@ const NavBar = () => {
                                 `}
                             >
                                 <Link href={item.link}>{item.title}</Link>
-                            </div>
+                            </li>
                         ))}
-                    </div>
+                    </ul>
                 </nav>
             </motion.div>
-        </div>
      );
 }
  

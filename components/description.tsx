@@ -1,5 +1,4 @@
-
-"use client";
+"use client"
 import { TypeAnimation } from "react-type-animation";
 import Typer from "./typingAnimation";
 import Image from "next/image";
@@ -13,55 +12,80 @@ const Description = () => {
     nombre = ('ValentinoArmindo').split("");
     let apellido: string[] = []
     apellido = ('Hontar_Dos_Santos').split("");
-    const texto: string [] = [`
-        Estudiante de desarrollo de aplicaciones web con sólida comprensión de programación y diseño
-        web. ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎
-         ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎
-         ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  
-        Experimentado en tecnologías front-end como HTML, CSS, JavaScript, y frameworks como
-        React, Vue, Django, Sprinboot.  Capacidad para trabajar en equipos colaborativos,
-        adaptarse a cambios rápidos y apasionado por aprender nuevas tecnologías. Busco oportunidades
-        para contribuir al desarrollo de proyectos innovadores en aplicaciones web.‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎
-         ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎
-         ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎
-         Tengo experienza programando en Typescript y he utilizado con más frecuencia frameworks como Vue, React con Nextjs (Esta web ha sido creada con estas tecnologías) en el front.
-         En el backend he trabajado generando APIS con Django y Python, también Sprinboot con Java.
+    
 
-        `]
+
     return ( 
-        <div className="flex size-full justify-between">
-            <motion.div
-                    initial={{ scale: 0, opacity: 0, y: '-100vw' }}    
-                    animate={{ scale: 1, opacity: 1, y: 0 }}    
-                    transition={{ type: "spring", stiffness: 50, duration: 2 }}  
-                    
-                    className="flex flex-col items-center justify-center w-[49%] bg-slate-100 rounded "
-            >
-                    <div className="text-black mt-5 text-6xl">
-                        {/* <Typer descriptions={descripciones} speed={10} intervalo={5000}/> */}
-                        
-                            <h1 className="font-bold flex">
-                                {/* Valentino Hontar <TransitionApearence text="a" fontSize="15px"/> */}
-                                {nombre.map((item, index) => (
-                                    <TransitionApearence key={index} text={item} fontSize="40px" delay={index*0.2} color={`${item == "V" || item == "A" ? "#92D500" : "black"}`}/>
-                                ))}
-                            </h1>
-                            <p className="flex">
-                            {apellido.map((item, index) => (
-                                    <TransitionApearence key={index} text={item} fontSize="18px" delay={index*0.2} color={`${item == "H" || item == "D" || item == "S" ? "#92D500" : "black"}`}/>
-                                ))}
-                            </p>
-                        
+        <div className="bg-gradient-to-b from-slate-50/15  to-transparent  flex-crow w-[100%] max-w-[1024px] rounded z-10 h-[600px] relative ">
+            <div className="-translate-y-40">
+                <motion.div
+                initial={{y:-20, opacity: 0}}
+                animate={{opacity:1, y:0}}
+                >
+                    <div className="-full flex justify-center items-end h-[49%]">
+                        <Image src="/services.png" className="z-20" width={500} height={500} alt="Avatar"/>
                     </div>
-                <div className="z-10">
-                    <br />
-                    <Image src="/services.png"  alt="Avatar" width={500} height={500}/>
-                </div>
-            </motion.div>
-            <div className=" w-[48%] flex justify-center  relative pointer-events-none backdrop-blur-sm z-10">
-                <iframe className="absolute -translate-y-24" src="https://giphy.com/embed/GRLqeKQjvmx9MtCIrH" width="680" height="680" allowFullScreen></iframe>
-                <p className="w-[80%] text-base mt-20 text-justify"><Typer descriptions={texto} speed={100} intervalo={15000}/></p>
-                <iframe className="absolute pointer-events-none mt-60" src="https://giphy.com/embed/cRNeCftHi7SlX3Fwml" width="680" height="680" allowFullScreen></iframe>
+                    <div className="max-w-[80%] w-auto m-auto p-8  bg-gradient-to-b from-slate-100 z-20  to-transparent rounded-md h-auto min-h-[50%] text-black">
+                        <h1>
+                            {
+                                ("Nombre: Valentino Armindo Hontar Dos Santos").split(" ").map((word,key) => (
+                                    <span key={key} className="inline-block mr-2">
+                                        {
+                                            word.split("").map((char, index) => (
+                                                <motion.span
+                                                key={index*key}
+                                                className="inline-block"
+                                                initial={{
+                                                    opacity:0,
+                                                    y: -20,
+                                                }}
+                                                animate={{
+                                                    opacity: 1,
+                                                    y: 0,
+                                                }}
+                                                transition={{
+                                                    delay: 0.9 + (index/100) + (key/100)
+                                                }}
+                                                >
+                                                    {char}
+                                                </motion.span>
+                                            ))
+                                        }
+                                    </span>
+                                ))
+                            }
+                        </h1>
+                        <p>
+                        {
+                            (`Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste accusantium vel atque reprehenderit molestias dolor natus quam, assumenda modi deserunt corrupti necessitatibus ullam sed consectetur quos dicta maiores, hic ipsam?`).split(" ").map((word, key) => (
+                                <span key={key} className="inline-block mr-2">
+                                    {
+                                        word.split("").map((character, index) => (
+                                            <motion.span
+                                            key={index*key}
+                                            className="inline-block"
+                                            initial={{
+                                                opacity: 0,
+                                                y: -20,
+                                            }}
+                                            animate={{
+                                                opacity: 1,
+                                                y: 0,
+                                            }}
+                                            transition={{
+                                                delay: 0.9 + (index/100) * (key/100)
+                                            }}
+                                            >
+                                                {character}
+                                            </motion.span>
+                                        ))
+                                    }
+                                </span>
+                            ))
+                        }
+                        </p>
+                    </div>
+                </motion.div>
             </div>
         </div>
      );

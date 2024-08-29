@@ -1,13 +1,13 @@
 import { delay, motion } from "framer-motion";
 
 type Props = {
-    text: string;
+    character: string;
     fontSize: string;
     delay: number,
     color: string,
 }
 
-const TransitionApearence: React.FC<Props> = ({text, fontSize, delay, color}) => {
+const TransitionApearence: React.FC<Props> = ({character, fontSize, delay, color}) => {
     return ( 
         <div>
             <motion.div
@@ -19,7 +19,7 @@ const TransitionApearence: React.FC<Props> = ({text, fontSize, delay, color}) =>
                 fontSize: fontSize,
             }}
             >
-                <span>{text}</span>
+                <span>{character}</span>
             </motion.div>
         </div>
      );
