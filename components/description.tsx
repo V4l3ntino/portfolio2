@@ -17,7 +17,7 @@ const Description = () => {
 
     return ( 
         <div className="bg-gradient-to-b from-slate-50/15  to-transparent  flex-crow w-[100%] max-w-[1024px] rounded z-10 h-[600px] relative ">
-            <h1 className="absolute w-auto flex -translate-y-40">
+            <h1 className="absolute w-auto flex -translate-y-40 titulo">
                 {
                     ("Web Developer").split(" ").map((word, key) => (
                         <span key={key} className={`mr-5 flex font-bold`}>
@@ -40,6 +40,7 @@ const Description = () => {
                 <motion.div
                 initial={{y:-20, opacity: 0}}
                 animate={{opacity:1, y:0}}
+                transition={{delay:0.5}}
                 >
                     <div className="-full flex justify-center items-end h-[49%]">
                         <Image src="/services.png" className="z-20, select-none" width={500} height={500} alt="Avatar"/>
