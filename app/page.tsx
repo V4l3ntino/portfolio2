@@ -1,5 +1,5 @@
 "use client"
-import Description from "@/components/Description";
+import Description from "@/components/description";
 import Typer from "@/components/typingAnimation";
 import { motion } from "framer-motion";
 import Image from "next/image";

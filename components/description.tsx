@@ -16,7 +16,7 @@ const Description = () => {
 
 
     return ( 
-        <div className="bg-gradient-to-b from-slate-50/15  to-transparent  flex-crow w-[100%] max-w-[1024px] rounded z-10 h-[600px] relative ">
+        <div className="bg-gradient-to-b from-slate-50/15  to-transparent  flex-row w-[100%] max-w-[1024px] rounded z-10 h-[600px] relative ">
             <h1 className="absolute w-auto flex -translate-y-40 titulo">
                 {
                     ("Web Developer").split(" ").map((word, key) => (
