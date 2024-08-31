@@ -23,7 +23,7 @@ const Description = () => {
     useEffect(() => {
         const timer = setTimeout(() => {
             setOutput(false)
-        }, 500)        
+        }, 2000)        
         return () => clearTimeout(timer)
     },[])
     useEffect(() => {
@@ -31,7 +31,7 @@ const Description = () => {
 
         const timer = setTimeout(() => {
             setNotVisible(false)
-        },3000)
+        },1000)
 
         return () => clearTimeout(timer)
     },[isVisible])

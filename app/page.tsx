@@ -10,7 +10,7 @@ export default function Home() {
           <motion.div
           initial={{x:'10vw', opacity:0}}
           animate={{x:0, opacity:1}}
-          transition={{delay:2}}
+          transition={{delay:4}}
           className="absolute flex w-[100%] -translate-y-6 max-w-[800px] m-auto"
           >
             <div className="flex w-40  justify-center">

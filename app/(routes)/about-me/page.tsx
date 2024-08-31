@@ -11,7 +11,7 @@ const About = () => {
                     outputTime={1000}
                 />
             </div>
-            <div className="bg-gradient-to-b from-slate-50/15  to-transparent  flex-crow w-[100%] max-w-[1024px] rounded z-10 h-[600px] relative backdrop-blur-lg ">
+            <div className="bg-gradient-to-b from-slate-50/15 p-3 mb-96 to-transparent  flex-crow w-[100%] max-w-[1024px] rounded z-10 h-[600px] relative backdrop-blur-lg ">
                 <TimeLine />
             </div>
         </main>
