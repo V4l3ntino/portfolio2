@@ -14,9 +14,9 @@ const TransitionApearence: React.FC<Props> = ({character, delay, color, inputOpa
     return ( 
         <div>
             <motion.div
-            initial={{ opacity: inputOpacity, filter: `blur(${inputBlur}px)` }}  // Comienza con opacidad 0 y desenfoque
-            animate={{ opacity: outputOpacity, filter: `blur(${outputBlur}px)` }}   // Termina con opacidad 1 y sin desenfoque
-            transition={{ duration: 1.5, ease: "easeInOut", delay: delay }} // Duración de 1.5 segundos y suavizado
+            initial={{ opacity: inputOpacity, filter: `blur(${inputBlur}px)` }}  
+            animate={{ opacity: outputOpacity, filter: `blur(${outputBlur}px)` }}   
+            transition={{ duration: 1.5, ease: "easeInOut", delay: delay }} 
             style={{
                 color: color,
                 

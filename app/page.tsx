@@ -16,7 +16,7 @@ export default function Home() {
             <div className="flex w-40  justify-center">
                   <iframe src="https://giphy.com/embed/g5nbfmiZQAjihMx4Oi" className="pointer-events-none select-none" allowFullScreen></iframe>
                   <div className="opacity-0">
-                      <Typer descriptions={[ "","*****"]} speed={50} intervalo={1200}/>
+                      <Typer descriptions={[ "","*****"]} intervalo={1200}/>
                   </div>
             </div>
           </motion.div>

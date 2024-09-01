@@ -6,11 +6,10 @@ type TypeProps = {
     descriptions: string[],
     repeat?: number,
     infinito?: true | false,
-    speed?: number,
     intervalo?: number,
 }
 
-const Typer: React.FC<TypeProps> = ({descriptions, repeat, infinito = true, speed=20, intervalo=1000}) => {
+const Typer: React.FC<TypeProps> = ({descriptions, repeat, infinito = true, intervalo=1000}) => {
     return ( 
         <TypeAnimation 
         sequence={
@@ -19,7 +18,7 @@ const Typer: React.FC<TypeProps> = ({descriptions, repeat, infinito = true, spee
             }, [])
         }
         wrapper='span'
-        speed={speed}
+        speed={50}
         repeat={infinito? Infinity : repeat}
         className='font-bold'
         />
