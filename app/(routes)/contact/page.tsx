@@ -23,16 +23,19 @@ const Contact = () => {
                         </motion.span>
                     ))}
                     </a></li>
-                    <li>Mi número: +34 
-                        <CountUp className="ml-2" end={6} start={0} duration={5} />    
-                        <CountUp end={0} start={0} duration={5} />    
-                        <CountUp end={3} start={0} duration={5} />    
-                        <CountUp end={1} start={0} duration={5} />    
-                        <CountUp end={1} start={0} duration={5} />    
-                        <CountUp end={2} start={0} duration={5} />    
-                        <CountUp end={4} start={0} duration={5} />    
-                        <CountUp end={9} start={0} duration={5} />    
-                        <CountUp end={6} start={0} duration={5} />    
+                    <li>Mi número: +34 <span></span>
+                        {
+                            (`603112496`).split("").map((char, index) => (
+                                <motion.span
+                                key={index}
+                                initial={{opacity:0, filter: "blur(15px)"}}
+                                animate={{opacity:1, filter: "blur(0px)"}}
+                                transition={{delay:(index+5)*0.09}}        
+                                >
+                                    <CountUp end={parseInt(char)} start={0} duration={5} />    
+                                </motion.span>
+                            ))
+                        }
                     </li>
                 </motion.ul>
             </div>
