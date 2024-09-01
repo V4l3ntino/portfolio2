@@ -31,7 +31,7 @@ const Description = () => {
 
         const timer = setTimeout(() => {
             setNotVisible(false)
-        },1000)
+        },3000)
 
         return () => clearTimeout(timer)
     },[isVisible])

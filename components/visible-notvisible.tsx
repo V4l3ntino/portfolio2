@@ -85,7 +85,7 @@ const VisibleNotvisible: React.FC<Props> = ({text, inputTime, outputTime}) => {
                                                 }}
                                                 animate={{
                                                     opacity: 0,
-                                                    y: 80,
+                                                    y: -80,
                                                 }}
                                                 transition={{
                                                     delay: (key/10)+(index/10)*0.9
