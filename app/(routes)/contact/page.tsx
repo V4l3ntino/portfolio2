@@ -32,10 +32,42 @@ const Contact = () => {
                                 animate={{opacity:1, filter: "blur(0px)"}}
                                 transition={{delay:(index+5)*0.09}}        
                                 >
-                                    <CountUp end={parseInt(char)} start={0} duration={5} />    
+                                    <CountUp end={parseInt(char)} start={0} duration={7} />    
                                 </motion.span>
                             ))
                         }
+                    </li>
+                    <br />
+                    <li>Otras web que he desarrollado durante mi periodo de aprendizaje. <br />
+                        <span className="mr-2"></span><a target="_blanck" href="https://v4l3ntino.github.io/WEB-PAGE/index.html">
+                            {
+                                (`-  https://v4l3ntino.github.io/WEB-PAGE/index.html`).split("").map((char, index) => (
+                                    <motion.span
+                                    key={index}
+                                    initial={{opacity:0, filter: "blur(15px)"}}
+                                    animate={{opacity:1, filter: "blur(0px)"}}
+                                    transition={{delay:(index/20)*0.9}}
+                                    >
+                                        {char}
+                                    </motion.span>
+                                ))
+                            }
+                        </a> <br />
+                        <span className="mr-2"></span><a target="_blanck" href="https://v4l3ntino.github.io/MI-PROYECTO/Index2.html">
+                            {
+                                (`-  https://v4l3ntino.github.io/MI-PROYECTO/Index2.html`).split("").map((char, index) => (
+                                    <motion.span
+                                    key={index}
+                                    initial={{opacity:0, filter: "blur(15px)"}}
+                                    animate={{opacity:1, filter: "blur(0px)"}}
+                                    transition={{delay:(index/20)*0.9}}
+                                    >
+                                        {char}
+                                    </motion.span>
+                                ))
+                            }
+                        </a>
+
                     </li>
                 </motion.ul>
             </div>

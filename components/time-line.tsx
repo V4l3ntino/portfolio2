@@ -40,7 +40,13 @@ const TimeLine = () => {
                                             animate={{x:0, opacity:1, filter: "blur(0px)"}}
                                             transition={{delay:5 + index}}                                            
                                             className="text-xl font-bold text-gray-300">{data.subtitle}</motion.p>
+                                            
                             </div>
+                            {
+                                data.link.length > 0 && <p className="text-white mb-4">
+                                    Web que desarrollé: <a href={data.link} target="_blanck">{data.link}</a>
+                                </p>
+                            }
                             <motion.p
                             initial={{x:20, opacity:0, filter: "blur(15px)"}}
                             animate={{x:0, opacity:1, filter: "blur(0px)"}}

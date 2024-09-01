@@ -69,6 +69,7 @@ export const dataAboutPage = [
         subtitle: "En Makito",
         description: "Después de las prácticas fuí contratado para trabajar en la empresa. Estuve actualizando la aplicación que desarrollé en las prácticas con Python y Django añadiendo nuevas funcionalidades y mejorando el rendimiento del mismo.",
         date: "Jun 2023 ",
+        link: ""
     },
     {
         id: 2,
@@ -76,6 +77,7 @@ export const dataAboutPage = [
         subtitle: "En Makito",
         description: "Durante este periodo me dediqué a realizar programas en Java dedicados a filtrar información relevante, así como el inicio de un proyecto con python y Django con la finalidad de tener un cuadrante de horarios de los trabajadores del taller. Desarrollé dos apis en java y Sprinboot para actualizar la información de la base de datos del programa con la base de datos de la empresa. ",
         date: "Abril 2023 ",
+        link: ""
     },
     {
         id: 3,
@@ -83,6 +85,7 @@ export const dataAboutPage = [
         subtitle: "Desarrollo de Aplicaciones Web",
         description: "Este grado superior me proporcionó una formación integral en el desarrollo de aplicaciones web, abarcando desde la planificación y diseño de interfaces hasta la programación backend. Aprendí a utilizar lenguajes como HTML, CSS, JavaScript y frameworks como React para el Front, y Sprinboot para el Backend, además de gestionar bases de datos con SQL. Esta formación me capacitó para crear soluciones web dinámicas y adaptables a las necesidades de los usuarios.",
         date: "Sept 2023",
+        link: "https://v4l3ntino.github.io/WEB-PAGE/index.html"
     },
     {
         id: 4,
@@ -90,6 +93,7 @@ export const dataAboutPage = [
         subtitle: "Mantenimiento de una web",
         description: "Durante este periodo me dediqué realizar el mantenimiento de la web de una tienda online así como solucionar los problemas y mejorar el rendimiento en los equipos electrónicos.",
         date: "Jun 2022",
+        link: ""
     },
     {
         id: 5,
@@ -97,6 +101,7 @@ export const dataAboutPage = [
         subtitle: "Sistemas Microinformático y Redes.",
         description: "Durante estas prácticas, adquirí conocimientos básicos y habilidades prácticas en el mantenimiento y configuración de sistemas microinformáticos y redes. Aprendí a instalar y gestionar sistemas operativos, configurar redes locales, realizar diagnósticos y solucionar problemas técnicos. Esta experiencia me permitió consolidar mi formación teórica y desarrollar una comprensión más profunda de las tecnologías informáticas esenciales.",
         date: "Sept 2021",
+        link: "https://v4l3ntino.github.io/MI-PROYECTO/Index2.html"
     },
 ]
 
